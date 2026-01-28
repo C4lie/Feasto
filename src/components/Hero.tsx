@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const router = useRouter();
   return (
     <section className="min-h-screen pt-24 flex items-center justify-center overflow-hidden bg-gradient-to-b from-secondary/30 to-background relative">
        {/* Decorative Elements */}
@@ -39,18 +41,21 @@ export default function Hero() {
                 Curated ingredients, minimal aesthetics, and a journey through taste. Experience food like never before.
              </motion.p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-               <Link 
-                 href="/explore"
+               <button 
+                 onClick={() => router.push('/explore')}
                  className="px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 hover:scale-105 transition-all cursor-pointer text-center"
                >
                   Start Exploring
-               </Link>
-               <Link 
-                 href="#journey"
+               </button>
+               <button 
+                 onClick={() => {
+                    const el = document.getElementById('journey');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                 }}
                  className="px-8 py-4 bg-transparent border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary/10 hover:scale-105 transition-all cursor-pointer text-center"
                >
                   Our Story
-               </Link>
+               </button>
              </div>
           </motion.div>
 

@@ -2,10 +2,12 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Menu, X, UtensilsCrossed } from 'lucide-react';
 
 export default function Navbar() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -49,12 +51,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-           <Link 
-             href="/explore"
-             className="inline-block bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 transition-colors hover:shadow-lg active:scale-95 transform duration-200 cursor-pointer"
+           <button 
+             onClick={() => router.push('/explore')}
+             className="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 transition-colors hover:shadow-lg active:scale-95 transform duration-200 cursor-pointer"
            >
               Explore
-           </Link>
+           </button>
         </div>
 
         {/* Mobile Toggle */}
