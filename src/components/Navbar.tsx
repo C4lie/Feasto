@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { Menu, X, UtensilsCrossed } from 'lucide-react';
 
 export default function Navbar() {
@@ -49,10 +49,11 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-           <Link href="/explore">
-             <button className="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 transition-colors hover:shadow-lg active:scale-95 transform duration-200 cursor-pointer">
+           <Link 
+             href="/explore"
+             className="inline-block bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-orange-600 transition-colors hover:shadow-lg active:scale-95 transform duration-200 cursor-pointer"
+           >
               Explore
-            </button>
            </Link>
         </div>
 
@@ -67,30 +68,46 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0 }}
-          className="absolute top-full left-0 right-0 bg-background border-b border-border md:hidden p-6 flex flex-col gap-4 shadow-xl"
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-lg font-medium p-2 hover:bg-secondary/50 rounded-lg transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "100vh" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-xl md:hidden z-40 flex flex-col pt-24 px-6 gap-6 overflow-hidden"
+          >
+            {navLinks.map((link, idx) => (
+              <motion.div
+                key={link.name}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * idx }}
+              >
+                <Link
+                  href={link.href}
+                  className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/50 hover:to-primary transition-all"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.3 }}
             >
-              {link.name}
-            </Link>
-          ))}
-          <Link href="/explore" onClick={() => setMobileMenuOpen(false)}>
-            <button className="bg-primary text-white w-full py-3 rounded-full mt-2 font-bold hover:bg-orange-600 transition-colors">
-              Explore Collection
-            </button>
-          </Link>
-        </motion.div>
-      )}
+              <Link 
+                href="/explore" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-center bg-primary text-white w-full py-4 rounded-xl mt-4 font-bold text-xl hover:bg-orange-600 transition-colors shadow-lg"
+              >
+                  Explore Collection
+              </Link>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -34,7 +34,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "1",
     name: "Truffle Mushroom Burger",
-    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/truffle-burger.png",
     category: "street-food",
     ingredients: ["Brioche Bun", "Truffle Oil", "Swiss Cheese", "Portobello", "Arugula"],
     description: "A rich, earthy experience featuring slow-roasted portobello mushrooms and premium truffle oil on a toasted brioche bun.",
@@ -56,7 +56,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "2",
     name: "Avocado Toast Royale",
-    image: "https://images.unsplash.com/photo-1588137372308-15f75323a675?auto=format&fit=crop&w=800&q=80",
+    image: "/images/avocado-toast.png",
     category: "healthy",
     ingredients: ["Sourdough", "Haas Avocado", "Poached Egg", "Chili Flakes", "Lemon"],
     description: "Creamy avocado mash topped with a perfectly poached egg and a sprinkle of chili flakes for a gentle kick.",
@@ -78,7 +78,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "3",
     name: "Midnight Berry Cake",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/midnight-berry-cake.png",
     category: "desserts",
     ingredients: ["Dark Chocolate", "Blueberries", "Vanilla Bean", "Cream", "Flour"],
     description: "Decadent dark chocolate layers infused with fresh blueberry reduction and finished with vanilla bean cream.",
@@ -101,7 +101,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "4",
     name: "Firecracker Tacos",
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+    image: "/images/firecracker-tacos.png",
     category: "spicy",
     ingredients: ["Corn Tortilla", "Spicy Beef", "Jalapeños", "Lime", "Cilantro"],
     description: "Authentic street tacos packed with spicy seasoned beef and topped with fresh jalapeños and zesty lime.",
@@ -123,7 +123,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "5",
     name: "Zen Bowl",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    image: "/images/zen-bowl.png",
     category: "healthy",
     ingredients: ["Quinoa", "Edamame", "Cucumber", "Sesame", "Tofu"],
     description: "A balanced bowl of nutrient-rich quinoa, crisp veggies, and a light sesame ginger dressing.",
@@ -145,7 +145,7 @@ export const foodItems: FoodItem[] = [
   {
     id: "6",
     name: "Matcha Lava Cookie",
-    image: "https://images.unsplash.com/photo-1499636138143-bd649043ea80?auto=format&fit=crop&w=800&q=80",
+    image: "/images/matcha-lava-cookie.png",
     category: "desserts",
     ingredients: ["Matcha Powder", "White Chocolate", "Almond Flour", "Butter"],
     description: "Crispy on the outside, gooey on the inside. A matcha-infused delight with a white chocolate lava center.",
@@ -168,7 +168,7 @@ export const foodItems: FoodItem[] = [
   {
      id: "7",
      name: "Golden Ramen",
-     image: "https://images.unsplash.com/photo-1591814468924-caf88d1232e1?auto=format&fit=crop&w=800&q=80",
+     image: "/images/golden-ramen.png",
      category: "street-food",
      ingredients: ["Ramen Noodles", "Soft Boiled Egg", "Nori", "Miso Broth", "Scallions"],
      description: "Hand-pulled noodles swimming in a rich, 12-hour slow-cooked miso broth topped with a perfect jammy egg.",
@@ -190,7 +190,7 @@ export const foodItems: FoodItem[] = [
   {
      id: "8",
      name: "Spicy Tuna Roll",
-     image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80",
+     image: "/images/spicy-tuna-roll.png",
      category: "spicy",
      ingredients: ["Sushi Rice", "Tuna", "Sriracha", "Nori", "Cucumber"],
      description: "Fresh ocean tuna mixed with fiery sriracha mayo, wrapped in seasoned sushi rice and crisp seaweed.",
@@ -212,7 +212,7 @@ export const foodItems: FoodItem[] = [
   {
      id: "9",
      name: "Acai Paradise",
-     image: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80",
+     image: "/images/acai-paradise.png",
      category: "healthy",
      ingredients: ["Acai Pulp", "Granola", "Banana", "Strawberries", "Honey"],
      description: "A refreshing frozen acai base topped with house-made granola, fresh fruits, and a drizzle of organic honey.",
@@ -234,7 +234,7 @@ export const foodItems: FoodItem[] = [
   {
      id: "10",
      name: "Tiramisu Cloud",
-     image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
+     image: "/images/tiramisu-cloud.png",
      category: "desserts",
      ingredients: ["Mascarpone", "Espresso", "Ladyfingers", "Cocoa Powder"],
      description: "Layers of coffee-soaked ladyfingers and whipped mascarpone cream, dusted with rich cocoa.",
@@ -256,7 +256,7 @@ export const foodItems: FoodItem[] = [
    {
      id: "11",
      name: "Elote Corn Ribs",
-     image: "https://images.unsplash.com/photo-1559419137-b459468e27c0?auto=format&fit=crop&w=800&q=80",
+     image: "/images/elote-corn-ribs.png",
      category: "street-food",
      ingredients: ["Corn", "Cotija Cheese", "Chili Powder", "Lime Mayo"],
      description: "Curled corn 'ribs' charred to perfection, slathered in tangy lime mayo and sprinkled with cheese and chili.",
@@ -278,7 +278,7 @@ export const foodItems: FoodItem[] = [
   {
      id: "12",
      name: "Mango Sticky Rice",
-     image: "https://images.unsplash.com/photo-1582294101140-620399d8d197?auto=format&fit=crop&w=800&q=80",
+     image: "/images/mango-sticky-rice.png",
      category: "desserts",
      ingredients: ["Sticky Rice", "Coconut Milk", "Ripe Mango", "Mung Beans"],
      description: "Warm coconut sweet rice paired with chilled ripe mango slices. A classic Thai favorite.",

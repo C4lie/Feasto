@@ -18,7 +18,7 @@ export default function AboutSection() {
              className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl"
            >
               <Image 
-                src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1000&auto=format&fit=crop"
+                src="/images/chefs-cooking.png"
                 alt="Chefs cooking"
                 fill
                 className="object-cover"

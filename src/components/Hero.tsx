@@ -39,23 +39,17 @@ export default function Hero() {
                 Curated ingredients, minimal aesthetics, and a journey through taste. Experience food like never before.
              </motion.p>
              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-               <Link href="/explore">
-                 <motion.button 
-                   whileHover={{ scale: 1.05 }}
-                   whileTap={{ scale: 0.95 }}
-                   className="px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 transition-all cursor-pointer box-decoration-clone"
-                 >
-                    Start Exploring
-                 </motion.button>
+               <Link 
+                 href="/explore"
+                 className="px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 hover:scale-105 transition-all cursor-pointer text-center"
+               >
+                  Start Exploring
                </Link>
-               <Link href="#journey">
-                 <motion.button 
-                   whileHover={{ scale: 1.05 }}
-                   whileTap={{ scale: 0.95 }}
-                   className="px-8 py-4 bg-transparent border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary/10 transition-all cursor-pointer"
-                 >
-                    Our Story
-                 </motion.button>
+               <Link 
+                 href="#journey"
+                 className="px-8 py-4 bg-transparent border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary/10 hover:scale-105 transition-all cursor-pointer text-center"
+               >
+                  Our Story
                </Link>
              </div>
           </motion.div>

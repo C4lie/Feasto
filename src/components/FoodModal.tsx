@@ -35,27 +35,29 @@ export default function FoodModal({ item, onClose }: FoodModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="bg-background rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+          className="bg-background rounded-3xl overflow-hidden max-w-4xl w-full shadow-2xl flex flex-col md:flex-row max-h-[90vh] md:max-h-[85vh] relative"
         >
+          {/* Close Button Mobile */}
+          <button
+             onClick={onClose}
+             className="absolute top-4 right-4 md:hidden bg-black/60 p-2 rounded-full text-white z-20 backdrop-blur-md"
+           >
+             <X className="w-5 h-5" />
+           </button>
+
           {/* Image Side */}
-          <div className="relative w-full md:w-1/2 h-48 md:h-auto">
+          <div className="relative w-full md:w-1/2 h-64 md:h-auto shrink-0">
             <Image
               src={item.image}
               alt={item.name}
               fill
               className="object-cover"
             />
-             <button
-              onClick={onClose}
-              className="absolute top-4 left-4 md:hidden bg-black/50 p-2 rounded-full text-white z-10"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="absolute inset-0 bg-black/30 md:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent md:hidden h-24 bottom-0 top-auto" />
           </div>
 
           {/* Content Side */}
-          <div className="flex-1 p-8 overflow-y-auto relative bg-background">
+          <div className="flex-1 p-6 md:p-8 overflow-y-auto bg-background -mt-6 md:mt-0 relative z-10 rounded-t-3xl md:rounded-none">
              {/* Header */}
              <div className="flex justify-between items-start mb-6">
                <div>
